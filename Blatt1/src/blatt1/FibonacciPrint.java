@@ -1,6 +1,13 @@
 package blatt1;
 public class FibonacciPrint{
 
+  /**
+   * Liest eine Zahl aus dem Eingabe Stream ein und druckt die einzelnen Folgenglieder der Fibonacci-Folge auf die Konsole.
+   * Erstellt ein Objekt der Klasse Fibonacci und ruft darauf die Methode next() auf, um das nächste Folgenglied zu berechnen.
+   * 
+   * @param args zum einlesen einer Zahl
+   * @author Fabian Westphal, Annemarie Witschas
+   */
   public static void main(String[] args) {
 
     //Eingabe einlesen
