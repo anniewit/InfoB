@@ -1,4 +1,11 @@
 package blatt1;
+
+/**
+ * Druckt die berechneten Werte der Klasse Fibonacci auf die Konsole aus.
+ * 
+ * @author Fabian Westphal, Annemarie Witschas
+ *
+ */
 public class FibonacciPrint{
 
   /**
@@ -6,7 +13,6 @@ public class FibonacciPrint{
    * Erstellt ein Objekt der Klasse Fibonacci und ruft darauf die Methode next() auf, um das nächste Folgenglied zu berechnen.
    * 
    * @param args zum einlesen einer Zahl
-   * @author Fabian Westphal, Annemarie Witschas
    */
   public static void main(String[] args) {
 

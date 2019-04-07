@@ -1,13 +1,20 @@
 package blatt1;
 /**
- * 
+ * Klasse, die Brüche aus übergebenen ints erstellt und folgende Rechenarten durchführt:
+ * Multiklipation mit Konstante, anderem Bruch und mehrern Brüchen, Division durch einen Bruch
+ * @author Fabian Westphal, Annemarie Witschas
  */
 public class Fraction{
 
     private int numerator; //Zähler
     private int denominator; //Nenner
 
-    //Konstruktor
+    /**
+     * Konstruiert Fraction-Objekt aus übergebenen ints 
+     * kürzt automatisch
+     * @param num
+     * @param denom
+     */
     public Fraction(int num, int denom){
     	
     	if(denom == 0) {
@@ -18,27 +25,28 @@ public class Fraction{
 
         //kürzen, indem größter gemeinsamer Teiler gefunden wird
         int ggt = getGgt(num,denom);
-
-        //durch ggt dividieren, wenn ggt nicht gleich numerator
-        if(ggt != num){
-            num /= ggt;
-            denom /= ggt; 
-        }
         
+        // durch größten gemeinsamen Teiler teilen
+        num /= ggt;
+        denom /= ggt; 
+               
         this.numerator = num;
         this.denominator = denom;
     }
 
-    //Constructor Chaining
+    /**
+     * Constructor Chaining: Ist kein Nenner angegeben, 1 als Nenner setzen
+     * @param num Zähler
+     */
     public Fraction(int num){
         this(num, 1);
     }
 
     /**
-     * berechnet GrÃ¶ÃŸten Gemeinsamen Teiler nach dem Euklidischen Alorithmus
-     * @param a ZÃ¤hler
+     * berechnet Größten Gemeinsamen Teiler nach dem Euklidischen Alorithmus
+     * @param a Zahler
      * @param b Nenner
-     * @return grÃ¶ÃŸten gemeinsamen Teiler
+     * @return größten gemeinsamen Teiler
      */
     public int getGgt(int a, int b){
         int rest;
@@ -78,6 +86,18 @@ public class Fraction{
         Fraction reziproke = new Fraction(rezNum, rezDenom);
         Fraction quotient = this.multiply(reziproke);
         return quotient;
+
+    }
+    Fraction multiply(Fraction ... factor){
+    	int num = 1;
+    	int denom = 1;
+    	for(int i = 0; i < factor.length; i++) {
+    		num *= this.numerator * factor[i].getNumerator();
+    		denom *= this.denominator * factor[i].getDenominator();
+    	}
+        
+        Fraction product = new Fraction(num, denom);
+        return product;
 
     }
  

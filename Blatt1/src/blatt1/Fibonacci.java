@@ -2,7 +2,6 @@ package blatt1;
 
 /**
  * Implementiert die Fibonacci Reihe, welche immer die beiden vorherigen Werte addiert, beginnend mit 0 und 1.
- * 
  * @author Fabian Westphal, Annemarie Witschas
  *
  */
@@ -13,7 +12,7 @@ public class Fibonacci{
   int secondNumber = 1; //f(1)
 
   /**
-   * 
+   * Berechnet nächstes Folgenglied, in dem die aktuellen letzten beiden Werte aufsummiert werden
    * @return Summe der beiden letzten Zahlen als aktuelles Folgenglied
    */
   public int next(){
