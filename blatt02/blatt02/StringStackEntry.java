@@ -1,12 +1,12 @@
 /**
  * Represents an entry of a <code>StringStack</code> which holds a String and a
  * reference to the next StringStackEntry.
- * 
+ *
  * @author Lars Huning
- * 
+ *
  */
 class StringStackEntry {
-   
+
    /**
     * The next StringStackEntry
     */
@@ -25,7 +25,7 @@ class StringStackEntry {
    }
 
    /**
-    * 
+    *
     * @param s
     *           String in Stack which is represented by this StringStackEntry
     * @param next

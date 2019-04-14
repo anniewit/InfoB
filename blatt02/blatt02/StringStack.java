@@ -15,18 +15,18 @@ public class StringStack {
 
    //Copy-Konstruktor
    public StringStack(StringStack original){
-     System.out.println("Copy-Konstruktor aufgerufen");
+     //Elemente vom Original zu einem temporaeren verschieben
      StringStack temp = new StringStack();
      while (!original.empty()) {
        temp.push(original.pop());
      }
-     System.out.println("Original is empty");
+     //Fuer jedes Element wird der beinhaltete String ausgelesen und gespeichert
      while (!temp.empty()) {
        String tempEntry = temp.pop();
+       //Aus dem String werden zwei StackEntries gebildet und ensprechend zurueck auf den Original und den Copy-Stack gepushed.
        this.push(tempEntry);
        original.push(tempEntry);
      }
-     System.out.println("Temp is empty.");
    }
 
    /**
