@@ -8,4 +8,11 @@ public class AssertBoolean{
     }
     return true;
   }
+  public static boolean correctArea(int expectedArea, int x, int y){
+    Arena arena = new Arena();
+    if (expectedArea != arena.getArea(x,y)) {
+      return false;
+    }
+    return true;
+  }
 }
