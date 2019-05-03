@@ -1,0 +1,44 @@
+//package blatt03;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		
+		if(args.length != 3) {
+			System.err.println("Keine korrekte Rechnung eingegeben");
+			System.err.println("Bitte Rechnung im Format 1/2 + -1/2 eingeben.");
+			System.exit(-1);
+
+		}
+		
+		Fraction one = Fraction.parseFraction(args[0]);
+		Fraction two = Fraction.parseFraction(args[2]);
+		String operator = args[1];
+		
+		Fraction result = new Fraction(-1);
+
+		
+		switch(operator) {
+			case "+": result = one.add(two);
+				break;
+			case "-": result = one.subtract(two);
+				break;
+			case "^*": result = one.multiply(two);
+				break;
+			case "/": result = one.divide(two);
+				break;
+			default: 
+				System.err.println("Kein korrektes Rechenzeichen eingegeben");
+				System.err.println("Bitte Rechnung im Format 1/2 + -1/2 eingeben. Mögliche Rechenzeichen: + * - /");
+				System.exit(-1);
+				
+		}
+		//Ausgabe des Ergebnis
+		System.out.println("Ergebnis: " + result.toString());
+		
+		
+		
+		
+		
+	}
+}
