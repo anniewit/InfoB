@@ -1,4 +1,7 @@
-public class Point extends Geometry{
+//package geometry;
+
+
+public class Point extends Geometry implements Comparable{
     /**
      * coordinates of point
      */
@@ -31,7 +34,6 @@ public class Point extends Geometry{
             return ((Volume) other).encapsulate(this);
         }
         return null; 
-
 
     }
 

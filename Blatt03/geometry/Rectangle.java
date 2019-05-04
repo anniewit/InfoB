@@ -1,3 +1,5 @@
+//package geometry;
+
 public class Rectangle extends Volume{
     /**
      * coordinates of point

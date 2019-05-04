@@ -1,4 +1,6 @@
+//package geometry;
+
 public interface Comparable{
 
-  //   compareTo(Object o);
+  public double compareTo(Object o);
 }

@@ -1,3 +1,5 @@
+//package blatt03.geometry;
+
 /**
  * Every Geometry represents a body in a data-space with {@link #dimensions()}.
  *
@@ -9,12 +11,6 @@ public abstract class Geometry implements Comparable{
     * Holds the number of dimensions for this Geometry.
     */
    private int dimension;
-
-/*   Wo kommt das her? Kann weg?
- @Override
-   compareTo(Objects o){
-       
-   } */
 
    /**
     * Create a new Geometry. Every Geometry must have a <code>dimension</code>
@@ -39,6 +35,19 @@ public abstract class Geometry implements Comparable{
    public int dimensions() {
       return this.dimension;
    }
+
+  /**
+   * Compares volume of one Geometry with another Geometry.
+   * @return double: difference in volume
+   */ 
+  public double compareTo(Object o){
+    if(o instanceof Geometry){
+      return( this.volume() - ((Geometry)o).volume());
+    }
+    System.err.println("Geometry kann nur mit einem Objekt vom Typ Geometry verglichen werden.");;
+    System.exit(-1);
+    return -1;
+  }
 
    /**
     * Returns the volume of this Geometry. If {@link #dimensions()} is
